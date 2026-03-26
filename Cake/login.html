@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | Cabrito's Cakehouse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container centered-card">
+        <div class="logo">
+		<img src="zitowscakehouse.png" alt="Cabrito's Cakehouse Logo" class="logo-img">
+		Cabrito's Cakehouse
+		</div>
+        <h2>Welcome Back</h2>
+        <form id="loginForm" onsubmit="handleLogin(event)">
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Email Address" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn-cream" style="width: 100%; cursor: pointer;">Sign In</button>
+        </form>
+        <p><a href="index.html">← Back to Home</a></p>
+    </div>
+
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            // Simple validation
+            if(email && password) {
+                // Store login info in localStorage (optional)
+                localStorage.setItem('userEmail', email);
+                localStorage.setItem('isLoggedIn', 'true');
+                
+                // Redirect to home page
+                window.location.href = 'index.html';
+            } else {
+                alert('Please fill in all fields');
+            }
+        }
+    </script>
+</body>
+</html>
