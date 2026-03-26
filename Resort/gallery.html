@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservation | Cabritos Resort</title>
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body class="reservation-page">
+  <header class="topbar static-topbar">
+    <a class="brand" href="index.html">Cabritos Resort🏝️🌊</a>
+    <nav aria-label="Primary">
+      <ul class="menu">
+       <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="info.html">About Cabritos Resort</a></li>
+        <li><a href="jul.html">Reservation</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="reservation-layout" id="reservation">
+    <section class="carousel-card" id="gallery" aria-label="Resort highlights">
+      <div class="carousel">
+        <div class="slide active">
+          <img src="image1.jpeg">
+        </div>
+        <div class="slide">
+          <img src="image2.jpeg">
+        </div>
+        <div class="slide">
+          <img src="image3.jpeg">
+        </div>
+
+        <button class="carousel-btn prev" type="button" aria-label="Previous image">&#10094;</button>
+        <button class="carousel-btn next" type="button" aria-label="Next image">&#10095;</button>
+      </div>
+
+      <div class="dots" aria-label="Select image">
+        <button class="dot active" type="button" aria-label="Show first image"></button>
+        <button class="dot" type="button" aria-label="Show second image"></button>
+        <button class="dot" type="button" aria-label="Show third image"></button>
+      </div>
+    </section>
+
+  <script src="gallery.js"></script>
+</body>
+</html>
