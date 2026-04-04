@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LedgerFlow | Secure Accounting Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">🔐 LedgerFlow</a>
+      <div class="nav-links">
+        <a href="index.html" data-nav="dashboard" class="active">Dashboard</a>
+        <a href="invoices.html" data-nav="invoices">Invoices</a>
+        <a href="clients.html" data-nav="clients">Clients</a>
+        <a href="pay-info.html" data-nav="payinfo">Pay Info</a>
+        <button class="btn-logout" id="logoutBtn">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section class="dashboard-header">
+      <div>
+        <h1>Welcome back, Alex</h1>
+        <p>Your secure accounting dashboard</p>
+      </div>
+      <div class="security-badge">
+        <span class="badge-lock">🔒</span>
+        <span class="badge-text">Secured with 2FA</span>
+      </div>
+    </section>
+
+    <!-- Dashboard Stats -->
+    <section class="dashboard-grid">
+      <div class="stat-card">
+        <div class="stat-icon">📊</div>
+        <h3>Total Revenue</h3>
+        <p class="stat-value">$48,250.00</p>
+        <p class="stat-change">↑ 12% from last month</p>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">📄</div>
+        <h3>Pending Invoices</h3>
+        <p class="stat-value">8</p>
+        <p class="stat-change">$12,500 awaiting payment</p>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">👥</div>
+        <h3>Active Clients</h3>
+        <p class="stat-value">24</p>
+        <p class="stat-change">3 new this month</p>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">💰</div>
+        <h3>Account Balance</h3>
+        <p class="stat-value">$156,800.50</p>
+        <p class="stat-change">Verified & Secured</p>
+      </div>
+    </section>
+
+    <!-- Recent Activities -->
+    <section class="dashboard-section">
+      <h2>Recent Activities</h2>
+      <div class="activity-list">
+        <div class="activity-item">
+          <div class="activity-icon">✓</div>
+          <div class="activity-content">
+            <p class="activity-title">Invoice #2401 Paid</p>
+            <p class="activity-time">March 24, 2026 at 2:30 PM</p>
+          </div>
+          <p class="activity-amount">$5,200.00</p>
+        </div>
+
+        <div class="activity-item">
+          <div class="activity-icon">📧</div>
+          <div class="activity-content">
+            <p class="activity-title">Invoice #2400 Sent</p>
+            <p class="activity-time">March 23, 2026 at 10:15 AM</p>
+          </div>
+          <p class="activity-amount">$3,800.00</p>
+        </div>
+
+        <div class="activity-item">
+          <div class="activity-icon">👤</div>
+          <div class="activity-content">
+            <p class="activity-title">New Client Added</p>
+            <p class="activity-time">March 22, 2026 at 4:45 PM</p>
+          </div>
+          <p class="activity-amount">-</p>
+        </div>
+
+        <div class="activity-item">
+          <div class="activity-icon">⚙️</div>
+          <div class="activity-content">
+            <p class="activity-title">2FA Settings Updated</p>
+            <p class="activity-time">March 21, 2026 at 11:30 AM</p>
+          </div>
+          <p class="activity-amount">-</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Actions -->
+    <section class="dashboard-section">
+      <h2>Quick Actions</h2>
+      <div class="action-buttons">
+        <button class="btn-action">+ Create Invoice</button>
+        <button class="btn-action">+ Add Client</button>
+        <button class="btn-action">📥 View Reports</button>
+        <button class="btn-action">⚙️ Settings</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Login Modal (hidden by default) -->
+  <div class="login-modal" id="loginModal">
+    <div class="login-container">
+      <div class="login-header">
+        <h1>LedgerFlow</h1>
+        <p>Secure Financial Management</p>
+      </div>
+
+      <!-- Login Form -->
+      <form class="login-form" id="loginForm" style="display: flex;">
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="••••••••" required>
+        </div>
+
+        <button type="submit" class="btn-login">Sign In</button>
+
+        <div class="login-footer">
+          <p>Don't have an account? <a href="#signup">Create one</a></p>
+          <p><a href="#forgot">Forgot your password?</a></p>
+        </div>
+      </form>
+
+      <!-- 2FA Verification Form (hidden by default) -->
+      <form class="twofa-form" id="twofaForm" style="display: none;">
+        <div class="twofa-header">
+          <h2>Two-Factor Authentication</h2>
+          <p>Enter the 6-digit code from your authenticator app</p>
+        </div>
+
+        <div class="twofa-icons">
+          <svg class="twofa-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="1"></circle>
+            <circle cx="19" cy="12" r="1"></circle>
+            <circle cx="5" cy="12" r="1"></circle>
+          </svg>
+        </div>
+
+        <div class="form-group">
+          <label for="twofa-code">Authentication Code</label>
+          <input type="text" id="twofa-code" name="twofa-code" placeholder="000000" maxlength="6" required>
+        </div>
+
+        <button type="submit" class="btn-login">Verify & Login</button>
+
+        <div class="twofa-footer">
+          <button type="button" class="btn-link" id="backToLogin">Back to login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

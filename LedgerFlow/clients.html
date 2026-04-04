@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LedgerFlow | Clients</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">🔐 LedgerFlow</a>
+      <div class="nav-links">
+        <a href="index.html" data-nav="dashboard">Dashboard</a>
+        <a href="invoices.html" data-nav="invoices">Invoices</a>
+        <a href="clients.html" data-nav="clients" class="active">Clients</a>
+        <a href="pay-info.html" data-nav="payinfo">Pay Info</a>
+        <button class="btn-logout" id="logoutBtn">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section class="page-header">
+      <div>
+        <h1>Clients</h1>
+        <p>Manage your client information and history</p>
+      </div>
+      <button class="btn-primary">+ Add Client</button>
+    </section>
+
+    <!-- Filter Bar -->
+    <section class="filter-bar">
+      <input type="search" placeholder="Search clients..." class="search-input">
+      <select class="filter-select">
+        <option>All Clients</option>
+        <option>Active</option>
+        <option>Inactive</option>
+      </select>
+    </section>
+
+    <!-- Clients Grid -->
+    <section class="clients-grid">
+      <div class="client-card">
+        <div class="client-header">
+          <div class="client-avatar">AC</div>
+          <div class="client-info">
+            <h3>Acme Corporation</h3>
+            <p>Business</p>
+          </div>
+        </div>
+        <div class="client-details">
+          <p><strong>Email:</strong> contact@acme.com</p>
+          <p><strong>Phone:</strong> (555) 123-4567</p>
+          <p><strong>Total Invoiced:</strong> $28,500</p>
+        </div>
+        <div class="client-actions">
+          <button class="btn-action-small">View</button>
+          <button class="btn-action-small">Edit</button>
+        </div>
+      </div>
+
+      <div class="client-card">
+        <div class="client-header">
+          <div class="client-avatar">TS</div>
+          <div class="client-info">
+            <h3>Tech Solutions Inc</h3>
+            <p>Technology</p>
+          </div>
+        </div>
+        <div class="client-details">
+          <p><strong>Email:</strong> info@techsol.com</p>
+          <p><strong>Phone:</strong> (555) 987-6543</p>
+          <p><strong>Total Invoiced:</strong> $15,800</p>
+        </div>
+        <div class="client-actions">
+          <button class="btn-action-small">View</button>
+          <button class="btn-action-small">Edit</button>
+        </div>
+      </div>
+
+      <div class="client-card">
+        <div class="client-header">
+          <div class="client-avatar">GS</div>
+          <div class="client-info">
+            <h3>Global Services Ltd</h3>
+            <p>Consulting</p>
+          </div>
+        </div>
+        <div class="client-details">
+          <p><strong>Email:</strong> hello@globalserv.com</p>
+          <p><strong>Phone:</strong> (555) 456-7890</p>
+          <p><strong>Total Invoiced:</strong> $32,200</p>
+        </div>
+        <div class="client-actions">
+          <button class="btn-action-small">View</button>
+          <button class="btn-action-small">Edit</button>
+        </div>
+      </div>
+
+      <div class="client-card">
+        <div class="client-header">
+          <div class="client-avatar">BV</div>
+          <div class="client-info">
+            <h3>Business Ventures LLC</h3>
+            <p>Finance</p>
+          </div>
+        </div>
+        <div class="client-details">
+          <p><strong>Email:</strong> support@bizventures.com</p>
+          <p><strong>Phone:</strong> (555) 321-0987</p>
+          <p><strong>Total Invoiced:</strong> $19,400</p>
+        </div>
+        <div class="client-actions">
+          <button class="btn-action-small">View</button>
+          <button class="btn-action-small">Edit</button>
+        </div>
+      </div>
+
+      <div class="client-card">
+        <div class="client-header">
+          <div class="client-avatar">PI</div>
+          <div class="client-info">
+            <h3>Premier Industries</h3>
+            <p>Manufacturing</p>
+          </div>
+        </div>
+        <div class="client-details">
+          <p><strong>Email:</strong> admin@premier.com</p>
+          <p><strong>Phone:</strong> (555) 654-3210</p>
+          <p><strong>Total Invoiced:</strong> $21,750</p>
+        </div>
+        <div class="client-actions">
+          <button class="btn-action-small">View</button>
+          <button class="btn-action-small">Edit</button>
+        </div>
+      </div>
+
+      <div class="client-card">
+        <div class="client-header">
+          <div class="client-avatar">+</div>
+          <div class="client-info">
+            <h3>Add New Client</h3>
+            <p>Create a new client profile</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

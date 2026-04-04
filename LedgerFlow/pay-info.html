@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LedgerFlow | Payment Information</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">🔐 LedgerFlow</a>
+      <div class="nav-links">
+        <a href="index.html" data-nav="dashboard">Dashboard</a>
+        <a href="invoices.html" data-nav="invoices">Invoices</a>
+        <a href="clients.html" data-nav="clients">Clients</a>
+        <a href="pay-info.html" data-nav="payinfo" class="active">Pay Info</a>
+        <button class="btn-logout" id="logoutBtn">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section class="page-header">
+      <div>
+        <h1>Payment Information</h1>
+        <p>Manage your payment methods and banking details</p>
+      </div>
+    </section>
+
+    <!-- Payment Methods -->
+    <section class="payment-section">
+      <h2>Payment Methods</h2>
+      <div class="payment-grid">
+        <div class="payment-card">
+          <div class="payment-header">
+            <span class="payment-icon">💳</span>
+            <span class="payment-badge">Primary</span>
+          </div>
+          <p class="payment-type">Visa Credit Card</p>
+          <p class="payment-details">•••• •••• •••• 4242</p>
+          <p class="payment-expiry">Expires: 12/25</p>
+          <div class="payment-actions">
+            <button class="btn-action-small">Edit</button>
+            <button class="btn-action-small">Remove</button>
+          </div>
+        </div>
+
+        <div class="payment-card">
+          <div class="payment-header">
+            <span class="payment-icon">🏦</span>
+            <span class="payment-badge">Secondary</span>
+          </div>
+          <p class="payment-type">Bank Account</p>
+          <p class="payment-details">Checking - ••••••••1234</p>
+          <p class="payment-expiry">Verified</p>
+          <div class="payment-actions">
+            <button class="btn-action-small">Edit</button>
+            <button class="btn-action-small">Remove</button>
+          </div>
+        </div>
+
+        <div class="payment-card add-card">
+          <div class="add-card-content">
+            <p class="add-card-icon">+</p>
+            <p class="add-card-text">Add Payment Method</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bank Transfer Details -->
+    <section class="payment-section">
+      <h2>Bank Transfer Details</h2>
+      <div class="info-box">
+        <div class="info-row">
+          <span class="info-label">Account Owner:</span>
+          <span class="info-value">LedgerFlow Inc</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Bank Name:</span>
+          <span class="info-value">First National Bank</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Account Number:</span>
+          <span class="info-value">••••••••••5678</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Routing Number:</span>
+          <span class="info-value">••••••••••1234</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">SWIFT Code:</span>
+          <span class="info-value">FNBAUS77</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transaction History -->
+    <section class="payment-section">
+      <h2>Recent Transactions</h2>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Method</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>March 24, 2026</td>
+            <td>Invoice #2401 Payment Received</td>
+            <td>$5,200.00</td>
+            <td>Credit Card</td>
+            <td><span class="status-badge status-paid">✓ Completed</span></td>
+          </tr>
+          <tr>
+            <td>March 20, 2026</td>
+            <td>Invoice #2395 Payment Received</td>
+            <td>$3,100.00</td>
+            <td>Bank Transfer</td>
+            <td><span class="status-badge status-paid">✓ Completed</span></td>
+          </tr>
+          <tr>
+            <td>March 18, 2026</td>
+            <td>Payout to Bank Account</td>
+            <td>-$8,500.00</td>
+            <td>Bank Transfer</td>
+            <td><span class="status-badge status-paid">✓ Completed</span></td>
+          </tr>
+          <tr>
+            <td>March 15, 2026</td>
+            <td>Invoice #2390 Payment Received</td>
+            <td>$2,150.00</td>
+            <td>Credit Card</td>
+            <td><span class="status-badge status-paid">✓ Completed</span></td>
+          </tr>
+          <tr>
+            <td>March 12, 2026</td>
+            <td>Monthly Service Fee</td>
+            <td>-$29.99</td>
+            <td>Credit Card</td>
+            <td><span class="status-badge status-paid">✓ Completed</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Security Settings -->
+    <section class="payment-section">
+      <h2>Security Settings</h2>
+      <div class="security-settings">
+        <div class="setting-item">
+          <div class="setting-info">
+            <h4>Two-Factor Authentication</h4>
+            <p>Add an extra layer of security to your account</p>
+          </div>
+          <div class="setting-status">
+            <span class="status-enabled">🔒 Enabled</span>
+          </div>
+        </div>
+
+        <div class="setting-item">
+          <div class="setting-info">
+            <h4>Payment Confirmation</h4>
+            <p>Require confirmation for all transactions</p>
+          </div>
+          <div class="setting-status">
+            <span class="status-enabled">✓ Enabled</span>
+          </div>
+        </div>
+
+        <div class="setting-item">
+          <div class="setting-info">
+            <h4>Transaction Alerts</h4>
+            <p>Get notified for all payment activities</p>
+          </div>
+          <div class="setting-status">
+            <span class="status-enabled">✓ Enabled</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LedgerFlow | Invoices</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">🔐 LedgerFlow</a>
+      <div class="nav-links">
+        <a href="index.html" data-nav="dashboard">Dashboard</a>
+        <a href="invoices.html" data-nav="invoices" class="active">Invoices</a>
+        <a href="clients.html" data-nav="clients">Clients</a>
+        <a href="pay-info.html" data-nav="payinfo">Pay Info</a>
+        <button class="btn-logout" id="logoutBtn">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section class="page-header">
+      <div>
+        <h1>Invoices</h1>
+        <p>Manage and track all your invoices</p>
+      </div>
+      <button class="btn-primary">+ Create Invoice</button>
+    </section>
+
+    <!-- Filter Bar -->
+    <section class="filter-bar">
+      <input type="search" placeholder="Search invoices..." class="search-input">
+      <select class="filter-select">
+        <option>All Status</option>
+        <option>Paid</option>
+        <option>Pending</option>
+        <option>Overdue</option>
+      </select>
+    </section>
+
+    <!-- Invoices Table -->
+    <section class="table-section">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Invoice #</th>
+            <th>Client</th>
+            <th>Amount</th>
+            <th>Due Date</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#2401</td>
+            <td>Acme Corporation</td>
+            <td>$5,200.00</td>
+            <td>March 20, 2026</td>
+            <td><span class="status-badge status-paid">✓ Paid</span></td>
+            <td><button class="btn-action-small">View</button></td>
+          </tr>
+          <tr>
+            <td>#2400</td>
+            <td>Tech Solutions Inc</td>
+            <td>$3,800.00</td>
+            <td>March 30, 2026</td>
+            <td><span class="status-badge status-pending">⏱ Pending</span></td>
+            <td><button class="btn-action-small">View</button></td>
+          </tr>
+          <tr>
+            <td>#2399</td>
+            <td>Global Services Ltd</td>
+            <td>$7,500.00</td>
+            <td>March 10, 2026</td>
+            <td><span class="status-badge status-overdue">⚠ Overdue</span></td>
+            <td><button class="btn-action-small">View</button></td>
+          </tr>
+          <tr>
+            <td>#2398</td>
+            <td>Business Ventures LLC</td>
+            <td>$4,200.00</td>
+            <td>March 25, 2026</td>
+            <td><span class="status-badge status-pending">⏱ Pending</span></td>
+            <td><button class="btn-action-small">View</button></td>
+          </tr>
+          <tr>
+            <td>#2397</td>
+            <td>Premier Industries</td>
+            <td>$2,100.00</td>
+            <td>March 15, 2026</td>
+            <td><span class="status-badge status-paid">✓ Paid</span></td>
+            <td><button class="btn-action-small">View</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
