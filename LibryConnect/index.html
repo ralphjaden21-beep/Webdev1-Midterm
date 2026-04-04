@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LibryConnect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero-card">
+      <div class="hero-copy">
+        <p class="eyebrow">Neighborhood Library Console</p>
+        <h1>LibryConnect</h1>
+        <p class="hero-text">
+LibryConnect is a simple and efficient platform designed to manage library activities. It allows users to search for books, manage members, track loans, and easily view available and overdue books in one convenient system.        </p>
+      </div>
+
+      <div class="hero-actions">
+        <button class="card-button overdue-button" type="button" data-panel-target="overdue-panel">
+          <span class="stamp">Alert Shelf</span>
+          <strong>Overdue</strong>
+          <span class="button-meta">3 items need attention</span>
+        </button>
+
+        <button class="logout-button" id="logoutButton" type="button">Log out</button>
+      </div>
+    </header>
+
+    <main class="dashboard">
+      <nav class="card-nav" aria-label="Library Navigation">
+        <button class="card-button nav-button is-active" type="button" data-panel-target="search-panel">
+          <span class="stamp">Catalog</span>
+          <strong>Search</strong>
+          <span class="button-meta">Find books and authors</span>
+        </button>
+        <button class="card-button nav-button" type="button" data-panel-target="members-panel">
+          <span class="stamp">Patron Desk</span>
+          <strong>Members</strong>
+          <span class="button-meta">Review active members</span>
+        </button>
+        <button class="card-button nav-button" type="button" data-panel-target="loans-panel">
+          <span class="stamp">Circulation</span>
+          <strong>Loans</strong>
+          <span class="button-meta">Track borrowed titles</span>
+        </button>
+      </nav>
+
+      <section class="display-frame" aria-live="polite">
+        <article id="search-panel" class="info-panel is-visible">
+          <div class="panel-heading">
+            <div>
+              <p class="panel-kicker">Catalog Search</p>
+              <h2>Search the collection</h2>
+            </div>
+            <p class="panel-note">Functional demo: search by title, author, or genre.</p>
+          </div>
+
+          <label class="search-field" for="searchInput">
+            <span class="sr-only">Search library catalog</span>
+            <input id="searchInput" type="search" placeholder="Try: history, poetry, Austen..." autocomplete="off">
+          </label>
+
+          <div id="searchResults" class="results-grid"></div>
+        </article>
+
+        <article id="members-panel" class="info-panel" hidden>
+          <div class="panel-heading">
+            <div>
+              <p class="panel-kicker">Member Registry</p>
+              <h2>Current members</h2>
+            </div>
+            <p class="panel-note">Recent activity and standing at a glance.</p>
+          </div>
+          <div id="membersList" class="stack-list"></div>
+        </article>
+
+        <article id="loans-panel" class="info-panel" hidden>
+          <div class="panel-heading">
+            <div>
+              <p class="panel-kicker">Loan Ledger</p>
+              <h2>Checked-out titles</h2>
+            </div>
+            <p class="panel-note">Live view of who has what and when it is due.</p>
+          </div>
+          <div id="loansList" class="stack-list"></div>
+        </article>
+
+        <article id="overdue-panel" class="info-panel accent-panel" hidden>
+          <div class="panel-heading">
+            <div>
+              <p class="panel-kicker">Attention Required</p>
+              <h2>Overdue items</h2>
+            </div>
+            <p class="panel-note">Priority follow-up list for the circulation desk.</p>
+          </div>
+          <div id="overdueList" class="stack-list"></div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

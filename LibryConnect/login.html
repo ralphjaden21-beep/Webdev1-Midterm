@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LibryConnect Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <section class="login-shell">
+      <div class="hero-card login-card">
+        <div class="hero-copy">
+          <p class="eyebrow">Neighborhood Library Console</p>
+          <h1>LibryConnect</h1>
+          <p class="hero-text">
+            Sign in to open the card catalog dashboard, manage members, and review the daily loan desk.
+          </p>
+          <div class="login-demo">
+            <span class="pill">Demo Login</span>
+            <p class="info-meta">Use any email with the password <strong>library123</strong>.</p>
+          </div>
+        </div>
+
+        <form class="login-form" id="loginForm">
+          <div class="form-header">
+            <p class="stamp">Staff Access</p>
+            <h2>Log In</h2>
+          </div>
+
+          <label class="form-field" for="emailInput">
+            <span>Email</span>
+            <input id="emailInput" name="email" type="email" placeholder="librarian@libryconnect.com" autocomplete="email" required>
+          </label>
+
+          <label class="form-field" for="passwordInput">
+            <span>Password</span>
+            <input id="passwordInput" name="password" type="password" placeholder="Enter password" autocomplete="current-password" required>
+          </label>
+
+          <p id="loginMessage" class="form-message" aria-live="polite"></p>
+
+          <button class="card-button submit-button" type="submit">
+            <span class="stamp">Card Entry</span>
+            <strong>Open Dashboard</strong>
+            <span class="button-meta">Continue to the library desk</span>
+          </button>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
