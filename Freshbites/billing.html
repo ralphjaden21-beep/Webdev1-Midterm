@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freshbite | Billing</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">🍱 Freshbite</a>
+      <div class="nav-links">
+        <a href="index.html" data-nav="home">Gallery</a>
+        <a href="meals.html" data-nav="meals">Meals</a>
+        <a href="billing.html" data-nav="billing" class="active">Billing</a>
+        <a href="plans.html" data-nav="plans">Plans</a>
+        <button class="btn-login" id="loginBtn">Login</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section class="page-header">
+      <h1>Billing & Payments</h1>
+      <p>Manage your subscriptions and payment methods</p>
+    </section>
+
+    <div class="billing-layout">
+      <section class="billing-panel">
+        <h2>Active Subscriptions</h2>
+        <div class="subscription-card">
+          <div class="status-badge active">Active</div>
+          <h3>Deluxe Selection</h3>
+          <p>7 meals per week</p>
+          <p class="billing-amount">$79.99/week</p>
+          <p class="billing-date">Next billing: March 31, 2026</p>
+          <div class="action-buttons">
+            <button class="btn-secondary">Modify</button>
+            <button class="btn-secondary">Pause</button>
+            <button class="btn-secondary">Cancel</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="billing-panel">
+        <h2>Payment Method</h2>
+        <div class="payment-card">
+          <p>💳 Visa ending in 4242</p>
+          <p class="payment-date">Expires 12/25</p>
+          <button class="btn-secondary">Update Payment</button>
+        </div>
+      </section>
+
+      <section class="billing-panel">
+        <h2>Billing History</h2>
+        <table class="billing-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Description</th>
+              <th>Amount</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>March 24, 2026</td>
+              <td>Deluxe Selection - Weekly</td>
+              <td>$79.99</td>
+              <td><span class="status-paid">Paid</span></td>
+            </tr>
+            <tr>
+              <td>March 17, 2026</td>
+              <td>Deluxe Selection - Weekly</td>
+              <td>$79.99</td>
+              <td><span class="status-paid">Paid</span></td>
+            </tr>
+            <tr>
+              <td>March 10, 2026</td>
+              <td>Deluxe Selection - Weekly</td>
+              <td>$79.99</td>
+              <td><span class="status-paid">Paid</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </main>
+
+  <!-- Side Drawer Login -->
+  <div class="login-drawer" id="loginDrawer">
+    <div class="drawer-content">
+      <button class="close-btn" id="closeLoginBtn">✕</button>
+      <h2>Login to Freshbite</h2>
+      
+      <form class="login-form" id="loginForm">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="••••••••" required>
+        </div>
+
+        <button type="submit" class="btn-submit">Sign In</button>
+
+        <div class="form-divider">or</div>
+
+        <button type="button" class="btn-social">🍎 Sign in with Apple</button>
+        <button type="button" class="btn-social">🔵 Sign in with Google</button>
+
+        <p class="form-footer">Don't have an account? <a href="#signup">Sign up</a></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

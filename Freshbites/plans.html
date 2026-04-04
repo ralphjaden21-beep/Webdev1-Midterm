@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freshbite | Plans</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">🍱 Freshbite</a>
+      <div class="nav-links">
+        <a href="index.html" data-nav="home">Gallery</a>
+        <a href="meals.html" data-nav="meals">Meals</a>
+        <a href="billing.html" data-nav="billing">Billing</a>
+        <a href="plans.html" data-nav="plans" class="active">Plans</a>
+        <button class="btn-login" id="loginBtn">Login</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section class="page-header">
+      <h1>Subscription Plans</h1>
+      <p>Find the perfect plan for your lifestyle</p>
+    </section>
+
+    <section class="plans-grid">
+      <div class="plan-card">
+        <h3>Starter</h3>
+        <p class="plan-price">$49.99<span>/week</span></p>
+        <p class="plan-desc">Perfect for trying us out</p>
+        <ul class="plan-perks">
+          <li>✓ 5 meals per week</li>
+          <li>✓ 3-meal variety</li>
+          <li>✓ Standard delivery</li>
+          <li>✗ Premium support</li>
+        </ul>
+        <button class="btn-select">Choose Plan</button>
+      </div>
+
+      <div class="plan-card featured">
+        <div class="plan-badge">Most Popular</div>
+        <h3>Deluxe</h3>
+        <p class="plan-price">$79.99<span>/week</span></p>
+        <p class="plan-desc">Maximum variety & flexibility</p>
+        <ul class="plan-perks">
+          <li>✓ 7 meals per week</li>
+          <li>✓ 6-meal variety</li>
+          <li>✓ Priority delivery</li>
+          <li>✓ Premium support</li>
+        </ul>
+        <button class="btn-select featured">Choose Plan</button>
+      </div>
+
+      <div class="plan-card">
+        <h3>Pro</h3>
+        <p class="plan-price">$119.99<span>/month</span></p>
+        <p class="plan-desc">Best for serious foodies</p>
+        <ul class="plan-perks">
+          <li>✓ Unlimited meals</li>
+          <li>✓ Custom meals</li>
+          <li>✓ Same-day delivery</li>
+          <li>✓ Dedicated nutritionist</li>
+        </ul>
+        <button class="btn-select">Choose Plan</button>
+      </div>
+    </section>
+
+    <section class="comparison-section">
+      <h2>Plan Comparison</h2>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Starter</th>
+            <th>Deluxe</th>
+            <th>Pro</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Meals per week</td>
+            <td>5</td>
+            <td>7</td>
+            <td>Unlimited</td>
+          </tr>
+          <tr>
+            <td>Meal varieties</td>
+            <td>3</td>
+            <td>6</td>
+            <td>Custom</td>
+          </tr>
+          <tr>
+            <td>Dietary options</td>
+            <td>3</td>
+            <td>5</td>
+            <td>All</td>
+          </tr>
+          <tr>
+            <td>Delivery speed</td>
+            <td>Standard</td>
+            <td>Priority</td>
+            <td>Same-day</td>
+          </tr>
+          <tr>
+            <td>Customer support</td>
+            <td>Email</td>
+            <td>Priority</td>
+            <td>Dedicated</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Side Drawer Login -->
+  <div class="login-drawer" id="loginDrawer">
+    <div class="drawer-content">
+      <button class="close-btn" id="closeLoginBtn">✕</button>
+      <h2>Login to Freshbite</h2>
+      
+      <form class="login-form" id="loginForm">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="••••••••" required>
+        </div>
+
+        <button type="submit" class="btn-submit">Sign In</button>
+
+        <div class="form-divider">or</div>
+
+        <button type="button" class="btn-social">🍎 Sign in with Apple</button>
+        <button type="button" class="btn-social">🔵 Sign in with Google</button>
+
+        <p class="form-footer">Don't have an account? <a href="#signup">Sign up</a></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

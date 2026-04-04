@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freshbite | Meals</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">🍱 Freshbite</a>
+      <div class="nav-links">
+        <a href="index.html" data-nav="home">Gallery</a>
+        <a href="meals.html" data-nav="meals" class="active">Meals</a>
+        <a href="billing.html" data-nav="billing">Billing</a>
+        <a href="plans.html" data-nav="plans">Plans</a>
+        <button class="btn-login" id="loginBtn">Login</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section class="page-header">
+      <h1>Our Meal Plans</h1>
+      <p>Choose from our diverse selection of nutritious meals</p>
+    </section>
+
+    <section class="meals-grid">
+      <div class="meal-card">
+        <div class="meal-badge">Popular</div>
+        <h3>Classic Combo</h3>
+        <p class="meal-desc">Balanced mix of proteins, grains, and veggies</p>
+        <ul class="meal-features">
+          <li>5 meals per week</li>
+          <li>2000 kcal average</li>
+          <li>Customizable</li>
+        </ul>
+        <p class="meal-price">$49.99/week</p>
+        <button class="btn-add">Add to Cart</button>
+      </div>
+
+      <div class="meal-card">
+        <div class="meal-badge">Best Value</div>
+        <h3>Deluxe Selection</h3>
+        <p class="meal-desc">Premium ingredients with gourmet preparation</p>
+        <ul class="meal-features">
+          <li>7 meals per week</li>
+          <li>2500 kcal average</li>
+          <li>Fully customizable</li>
+        </ul>
+        <p class="meal-price">$79.99/week</p>
+        <button class="btn-add">Add to Cart</button>
+      </div>
+
+      <div class="meal-card">
+        <h3>Keto Power</h3>
+        <p class="meal-desc">Low-carb, high-protein meals</p>
+        <ul class="meal-features">
+          <li>5 meals per week</li>
+          <li>1800 kcal average</li>
+          <li>Zero carbs</li>
+        </ul>
+        <p class="meal-price">$59.99/week</p>
+        <button class="btn-add">Add to Cart</button>
+      </div>
+
+      <div class="meal-card">
+        <h3>Plant-Based</h3>
+        <p class="meal-desc">100% vegan and delicious</p>
+        <ul class="meal-features">
+          <li>6 meals per week</li>
+          <li>2000 kcal average</li>
+          <li>Organic ingredients</li>
+        </ul>
+        <p class="meal-price">$69.99/week</p>
+        <button class="btn-add">Add to Cart</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Side Drawer Login -->
+  <div class="login-drawer" id="loginDrawer">
+    <div class="drawer-content">
+      <button class="close-btn" id="closeLoginBtn">✕</button>
+      <h2>Login to Freshbite</h2>
+      
+      <form class="login-form" id="loginForm">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="••••••••" required>
+        </div>
+
+        <button type="submit" class="btn-submit">Sign In</button>
+
+        <div class="form-divider">or</div>
+
+        <button type="button" class="btn-social">🍎 Sign in with Apple</button>
+        <button type="button" class="btn-social">🔵 Sign in with Google</button>
+
+        <p class="form-footer">Don't have an account? <a href="#signup">Sign up</a></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

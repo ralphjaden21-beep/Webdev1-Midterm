@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freshbite | Food Gallery</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">🍱 Freshbite</a>
+      <div class="nav-links">
+        <a href="index.html" data-nav="home" class="active">Gallery</a>
+        <a href="meals.html" data-nav="meals">Meals</a>
+        <a href="billing.html" data-nav="billing">Billing</a>
+        <a href="plans.html" data-nav="plans">Plans</a>
+        <button class="btn-login" id="loginBtn">Login</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section class="hero">
+      <h1>Fresh. Fast. Flavorful.</h1>
+      <p>Discover our curated selection of nutritious meals delivered to your door</p>
+    </section>
+
+    <!-- Food Gallery -->
+    <section class="gallery">
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <div class="gallery-image" style="background: linear-gradient(135deg, #FF6B6B, #FF8E53);">🥗</div>
+          <h3>Garden Fresh Salad</h3>
+          <p>$8.99 • Vegan</p>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-image" style="background: linear-gradient(135deg, #4ECDC4, #44A08D);">🍱</div>
+          <h3>Protein Bowl</h3>
+          <p>$12.99 • Gluten-Free</p>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-image" style="background: linear-gradient(135deg, #F38181, #AA96DA);">🍕</div>
+          <h3>Whole Grain Pizza</h3>
+          <p>$10.99 • Vegetarian</p>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-image" style="background: linear-gradient(135deg, #FCBAD3, #A6C0FE);">🥤</div>
+          <h3>Smoothie Bowl</h3>
+          <p>$9.99 • Vegan</p>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-image" style="background: linear-gradient(135deg, #FFB347, #FF6B6B);">🍗</div>
+          <h3>Grilled Chicken</h3>
+          <p>$13.99 • Keto</p>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-image" style="background: linear-gradient(135deg, #67B26F, #4CA2CD);">🥦</div>
+          <h3>Veggie Stack</h3>
+          <p>$7.99 • Vegan</p>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-image" style="background: linear-gradient(135deg, #FA709A, #FEE140);">🍣</div>
+          <h3>Sushi Platter</h3>
+          <p>$15.99 • Pescatarian</p>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-image" style="background: linear-gradient(135deg, #30CFD0, #330867);">🍜</div>
+          <h3>Ramen Noodles</h3>
+          <p>$11.99 • Spicy</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Side Drawer Login -->
+  <div class="login-drawer" id="loginDrawer">
+    <div class="drawer-content">
+      <button class="close-btn" id="closeLoginBtn">✕</button>
+      <h2>Login to Freshbite</h2>
+      
+      <form class="login-form" id="loginForm">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="••••••••" required>
+        </div>
+
+        <button type="submit" class="btn-submit">Sign In</button>
+
+        <div class="form-divider">or</div>
+
+        <button type="button" class="btn-social">🍎 Sign in with Apple</button>
+        <button type="button" class="btn-social">🔵 Sign in with Google</button>
+
+        <p class="form-footer">Don't have an account? <a href="#signup">Sign up</a></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
