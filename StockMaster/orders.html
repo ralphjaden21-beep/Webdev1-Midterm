@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StockMaster | Orders</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="barcode-logo">
+          <div class="barcode"></div>
+          <span>StockMaster</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" data-nav="dashboard">Dashboard</a>
+        <a href="stock.html" data-nav="stock">Stock</a>
+        <a href="suppliers.html" data-nav="suppliers">Suppliers</a>
+        <a href="orders.html" data-nav="orders" class="active">Orders</a>
+        <a href="reports.html" data-nav="reports">Reports</a>
+        <button class="btn-logout" id="logoutBtn">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section class="page-header">
+      <div>
+        <h1>Order Management</h1>
+        <p>Track and manage all purchase orders</p>
+      </div>
+      <button class="btn-action btn-primary">+ CREATE ORDER</button>
+    </section>
+
+    <!-- Filter Bar -->
+    <section class="control-bar">
+      <input type="text" placeholder="Search by order number..." class="search-input">
+      <select class="filter-select">
+        <option>All Status</option>
+        <option>Pending</option>
+        <option>Confirmed</option>
+        <option>Shipped</option>
+        <option>Delivered</option>
+        <option>Cancelled</option>
+      </select>
+    </section>
+
+    <!-- Orders Table -->
+    <section class="table-section">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Order #</th>
+            <th>Supplier</th>
+            <th>Date</th>
+            <th>Items</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ORD-5421</td>
+            <td>Industrial Parts Co.</td>
+            <td>March 20, 2026</td>
+            <td>4 items</td>
+            <td>$12,450.00</td>
+            <td><span class="status-badge status-info">→ IN TRANSIT</span></td>
+            <td>
+              <button class="btn-small">VIEW</button>
+              <button class="btn-small">TRACK</button>
+            </td>
+          </tr>
+          <tr>
+            <td>ORD-5420</td>
+            <td>Global Electronics Ltd</td>
+            <td>March 18, 2026</td>
+            <td>6 items</td>
+            <td>$8,750.00</td>
+            <td><span class="status-badge status-ok">✓ DELIVERED</span></td>
+            <td>
+              <button class="btn-small">VIEW</button>
+              <button class="btn-small">INVOICE</button>
+            </td>
+          </tr>
+          <tr>
+            <td>ORD-5419</td>
+            <td>Premium Hardware Supply</td>
+            <td>March 15, 2026</td>
+            <td>3 items</td>
+            <td>$5,300.00</td>
+            <td><span class="status-badge status-ok">✓ DELIVERED</span></td>
+            <td>
+              <button class="btn-small">VIEW</button>
+              <button class="btn-small">INVOICE</button>
+            </td>
+          </tr>
+          <tr>
+            <td>ORD-5418</td>
+            <td>Precision Components Inc</td>
+            <td>March 22, 2026</td>
+            <td>7 items</td>
+            <td>$15,600.00</td>
+            <td><span class="status-badge status-warning">⏱ PENDING</span></td>
+            <td>
+              <button class="btn-small">CONFIRM</button>
+              <button class="btn-small">EDIT</button>
+            </td>
+          </tr>
+          <tr>
+            <td>ORD-5417</td>
+            <td>Industrial Parts Co.</td>
+            <td>March 10, 2026</td>
+            <td>5 items</td>
+            <td>$9,200.00</td>
+            <td><span class="status-badge status-ok">✓ CONFIRMED</span></td>
+            <td>
+              <button class="btn-small">VIEW</button>
+              <button class="btn-small">SHIP</button>
+            </td>
+          </tr>
+          <tr>
+            <td>ORD-5416</td>
+            <td>Global Electronics Ltd</td>
+            <td>March 5, 2026</td>
+            <td>8 items</td>
+            <td>$11,950.00</td>
+            <td><span class="status-badge status-danger">✗ CANCELLED</span></td>
+            <td>
+              <button class="btn-small">VIEW</button>
+              <button class="btn-small">REORDER</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

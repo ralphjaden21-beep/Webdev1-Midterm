@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StockMaster | Stock Management</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="barcode-logo">
+          <div class="barcode"></div>
+          <span>StockMaster</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" data-nav="dashboard">Dashboard</a>
+        <a href="stock.html" data-nav="stock" class="active">Stock</a>
+        <a href="suppliers.html" data-nav="suppliers">Suppliers</a>
+        <a href="orders.html" data-nav="orders">Orders</a>
+        <a href="reports.html" data-nav="reports">Reports</a>
+        <button class="btn-logout" id="logoutBtn">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section class="page-header">
+      <div>
+        <h1>Stock Management</h1>
+        <p>View and manage all inventory items</p>
+      </div>
+      <button class="btn-action btn-primary">+ ADD NEW ITEM</button>
+    </section>
+
+    <!-- Filter & Search -->
+    <section class="control-bar">
+      <div class="search-box">
+        <input type="text" placeholder="Search by SKU or product name..." class="search-input">
+      </div>
+      <select class="filter-select">
+        <option>All Categories</option>
+        <option>Electronics</option>
+        <option>Hardware</option>
+        <option>Accessories</option>
+      </select>
+      <select class="filter-select">
+        <option>All Status</option>
+        <option>In Stock</option>
+        <option>Low Stock</option>
+        <option>Out of Stock</option>
+      </select>
+    </section>
+
+    <!-- Stock Table -->
+    <section class="table-section">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>SKU</th>
+            <th>Product Name</th>
+            <th>Category</th>
+            <th>Quantity</th>
+            <th>Min Level</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>SKU-2024-001</td>
+            <td>Industrial Motor</td>
+            <td>Electronics</td>
+            <td class="qty-high">524</td>
+            <td>100</td>
+            <td><span class="status-badge status-ok">✓ IN STOCK</span></td>
+            <td>
+              <button class="btn-small">EDIT</button>
+              <button class="btn-small">DELETE</button>
+            </td>
+          </tr>
+          <tr>
+            <td>SKU-2024-045</td>
+            <td>Safety Helmet</td>
+            <td>Hardware</td>
+            <td class="qty-low">15</td>
+            <td>50</td>
+            <td><span class="status-badge status-warning">⚠ LOW STOCK</span></td>
+            <td>
+              <button class="btn-small">RESTOCK</button>
+              <button class="btn-small">EDIT</button>
+            </td>
+          </tr>
+          <tr>
+            <td>SKU-2024-078</td>
+            <td>Power Cable</td>
+            <td>Accessories</td>
+            <td class="qty-high">1205</td>
+            <td>200</td>
+            <td><span class="status-badge status-ok">✓ IN STOCK</span></td>
+            <td>
+              <button class="btn-small">EDIT</button>
+              <button class="btn-small">DELETE</button>
+            </td>
+          </tr>
+          <tr>
+            <td>SKU-2024-102</td>
+            <td>Circuit Breaker</td>
+            <td>Electronics</td>
+            <td class="qty-zero">0</td>
+            <td>50</td>
+            <td><span class="status-badge status-danger">✗ OUT OF STOCK</span></td>
+            <td>
+              <button class="btn-small">REORDER</button>
+              <button class="btn-small">EDIT</button>
+            </td>
+          </tr>
+          <tr>
+            <td>SKU-2024-156</td>
+            <td>Pressure Gauge</td>
+            <td>Hardware</td>
+            <td class="qty-high">342</td>
+            <td>75</td>
+            <td><span class="status-badge status-ok">✓ IN STOCK</span></td>
+            <td>
+              <button class="btn-small">EDIT</button>
+              <button class="btn-small">DELETE</button>
+            </td>
+          </tr>
+          <tr>
+            <td>SKU-2024-203</td>
+            <td>Switch Housing</td>
+            <td>Accessories</td>
+            <td class="qty-low">28</td>
+            <td>60</td>
+            <td><span class="status-badge status-warning">⚠ LOW STOCK</span></td>
+            <td>
+              <button class="btn-small">RESTOCK</button>
+              <button class="btn-small">EDIT</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

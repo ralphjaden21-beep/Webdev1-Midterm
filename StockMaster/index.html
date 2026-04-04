@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StockMaster | Inventory Management</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="barcode-logo">
+          <div class="barcode"></div>
+          <span>StockMaster</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" data-nav="dashboard" class="active">Dashboard</a>
+        <a href="stock.html" data-nav="stock">Stock</a>
+        <a href="suppliers.html" data-nav="suppliers">Suppliers</a>
+        <a href="orders.html" data-nav="orders">Orders</a>
+        <a href="reports.html" data-nav="reports">Reports</a>
+        <button class="btn-logout" id="logoutBtn">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section class="dashboard-header">
+      <h1>Inventory Dashboard</h1>
+      <p>Real-time stock management system</p>
+    </section>
+
+    <!-- Key Metrics -->
+    <section class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-icon">📦</div>
+        <h3>Total Items</h3>
+        <p class="metric-value">2,458</p>
+        <p class="metric-label">In Stock</p>
+      </div>
+
+      <div class="metric-card">
+        <div class="metric-icon">⚠️</div>
+        <h3>Low Stock</h3>
+        <p class="metric-value">34</p>
+        <p class="metric-label">Requires Action</p>
+      </div>
+
+      <div class="metric-card">
+        <div class="metric-icon">🚚</div>
+        <h3>Pending Orders</h3>
+        <p class="metric-value">12</p>
+        <p class="metric-label">In Transit</p>
+      </div>
+
+      <div class="metric-card">
+        <div class="metric-icon">👥</div>
+        <h3>Active Suppliers</h3>
+        <p class="metric-value">18</p>
+        <p class="metric-label">Connected</p>
+      </div>
+    </section>
+
+    <!-- Action Buttons -->
+    <section class="action-section">
+      <h2>Quick Actions</h2>
+      <div class="action-buttons">
+        <button class="btn-action btn-primary">+ ADD STOCK</button>
+        <button class="btn-action btn-success">+ CREATE ORDER</button>
+        <button class="btn-action btn-warning">⚠ LOW STOCK ALERT</button>
+        <button class="btn-action btn-info">📊 VIEW REPORTS</button>
+      </div>
+    </section>
+
+    <!-- Recent Stock Updates -->
+    <section class="info-section">
+      <h2>Recent Stock Updates</h2>
+      <div class="update-list">
+        <div class="update-item">
+          <span class="update-icon">✓</span>
+          <div class="update-content">
+            <p class="update-title">SKU-2024-001: Received 500 units</p>
+            <p class="update-time">Today at 2:30 PM</p>
+          </div>
+          <span class="update-status success">COMPLETED</span>
+        </div>
+
+        <div class="update-item">
+          <span class="update-icon">⏱</span>
+          <div class="update-content">
+            <p class="update-title">SKU-2024-045: Restocking needed</p>
+            <p class="update-time">Today at 10:15 AM</p>
+          </div>
+          <span class="update-status pending">PENDING</span>
+        </div>
+
+        <div class="update-item">
+          <span class="update-icon">→</span>
+          <div class="update-content">
+            <p class="update-title">Order #ORD-5421 shipped to Distribution</p>
+            <p class="update-time">Yesterday at 4:45 PM</p>
+          </div>
+          <span class="update-status info">IN TRANSIT</span>
+        </div>
+
+        <div class="update-item">
+          <span class="update-icon">✓</span>
+          <div class="update-content">
+            <p class="update-title">Supplier update: New pricing for Category A</p>
+            <p class="update-time">2 days ago</p>
+          </div>
+          <span class="update-status success">UPDATED</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Login Modal -->
+  <div class="login-modal" id="loginModal">
+    <div class="login-container">
+      <div class="login-header">
+        <div class="barcode-logo-large">
+          <div class="barcode"></div>
+          <span>StockMaster</span>
+        </div>
+        <p>INDUSTRIAL INVENTORY SYSTEM</p>
+      </div>
+
+      <form class="login-form" id="loginForm">
+        <div class="form-group">
+          <label for="username">USERNAME</label>
+          <input type="text" id="username" name="username" placeholder="Enter username" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">PASSWORD</label>
+          <input type="password" id="password" name="password" placeholder="Enter password" required>
+        </div>
+
+        <button type="submit" class="btn-login btn-primary">LOGIN SYSTEM</button>
+
+        <div class="login-footer">
+          <p>Industrial Access Only</p>
+          <p style="margin-top: 1rem; font-size: 0.8rem;">Demo: any username/password</p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

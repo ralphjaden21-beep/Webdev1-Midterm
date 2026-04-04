@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StockMaster | Suppliers</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="barcode-logo">
+          <div class="barcode"></div>
+          <span>StockMaster</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" data-nav="dashboard">Dashboard</a>
+        <a href="stock.html" data-nav="stock">Stock</a>
+        <a href="suppliers.html" data-nav="suppliers" class="active">Suppliers</a>
+        <a href="orders.html" data-nav="orders">Orders</a>
+        <a href="reports.html" data-nav="reports">Reports</a>
+        <button class="btn-logout" id="logoutBtn">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section class="page-header">
+      <div>
+        <h1>Supplier Management</h1>
+        <p>Manage all supplier information and contracts</p>
+      </div>
+      <button class="btn-action btn-primary">+ ADD SUPPLIER</button>
+    </section>
+
+    <!-- Filter Bar -->
+    <section class="control-bar">
+      <input type="text" placeholder="Search suppliers..." class="search-input">
+      <select class="filter-select">
+        <option>All Status</option>
+        <option>Active</option>
+        <option>Inactive</option>
+        <option>On Hold</option>
+      </select>
+    </section>
+
+    <!-- Suppliers Grid -->
+    <section class="suppliers-grid">
+      <div class="supplier-card">
+        <div class="supplier-header">
+          <h3>Industrial Parts Co.</h3>
+          <span class="supplier-status active">ACTIVE</span>
+        </div>
+        <div class="supplier-details">
+          <p><strong>Contact:</strong> John Smith</p>
+          <p><strong>Phone:</strong> (555) 123-4567</p>
+          <p><strong>Email:</strong> contact@indparts.com</p>
+          <p><strong>Lead Time:</strong> 3-5 business days</p>
+          <p><strong>Rating:</strong> ★★★★★ (4.8/5)</p>
+        </div>
+        <div class="supplier-actions">
+          <button class="btn-action btn-info">VIEW ORDERS</button>
+          <button class="btn-action btn-success">SEND ORDER</button>
+          <button class="btn-small">EDIT</button>
+        </div>
+      </div>
+
+      <div class="supplier-card">
+        <div class="supplier-header">
+          <h3>Global Electronics Ltd</h3>
+          <span class="supplier-status active">ACTIVE</span>
+        </div>
+        <div class="supplier-details">
+          <p><strong>Contact:</strong> Sarah Johnson</p>
+          <p><strong>Phone:</strong> (555) 987-6543</p>
+          <p><strong>Email:</strong> sales@globalelec.com</p>
+          <p><strong>Lead Time:</strong> 7-10 business days</p>
+          <p><strong>Rating:</strong> ★★★★☆ (4.5/5)</p>
+        </div>
+        <div class="supplier-actions">
+          <button class="btn-action btn-info">VIEW ORDERS</button>
+          <button class="btn-action btn-success">SEND ORDER</button>
+          <button class="btn-small">EDIT</button>
+        </div>
+      </div>
+
+      <div class="supplier-card">
+        <div class="supplier-header">
+          <h3>Premium Hardware Supply</h3>
+          <span class="supplier-status active">ACTIVE</span>
+        </div>
+        <div class="supplier-details">
+          <p><strong>Contact:</strong> Mike Davis</p>
+          <p><strong>Phone:</strong> (555) 456-7890</p>
+          <p><strong>Email:</strong> orders@premhardware.com</p>
+          <p><strong>Lead Time:</strong> 2-3 business days</p>
+          <p><strong>Rating:</strong> ★★★★★ (4.9/5)</p>
+        </div>
+        <div class="supplier-actions">
+          <button class="btn-action btn-info">VIEW ORDERS</button>
+          <button class="btn-action btn-success">SEND ORDER</button>
+          <button class="btn-small">EDIT</button>
+        </div>
+      </div>
+
+      <div class="supplier-card">
+        <div class="supplier-header">
+          <h3>Fast Track Logistics</h3>
+          <span class="supplier-status inactive">INACTIVE</span>
+        </div>
+        <div class="supplier-details">
+          <p><strong>Contact:</strong> Tom Wilson</p>
+          <p><strong>Phone:</strong> (555) 321-0987</p>
+          <p><strong>Email:</strong> info@fasttrack.com</p>
+          <p><strong>Lead Time:</strong> 5-7 business days</p>
+          <p><strong>Rating:</strong> ★★★☆☆ (3.2/5)</p>
+        </div>
+        <div class="supplier-actions">
+          <button class="btn-action btn-info">VIEW ORDERS</button>
+          <button class="btn-action btn-warning">REACTIVATE</button>
+          <button class="btn-small">EDIT</button>
+        </div>
+      </div>
+
+      <div class="supplier-card">
+        <div class="supplier-header">
+          <h3>Precision Components Inc</h3>
+          <span class="supplier-status active">ACTIVE</span>
+        </div>
+        <div class="supplier-details">
+          <p><strong>Contact:</strong> Lisa Anderson</p>
+          <p><strong>Phone:</strong> (555) 654-3210</p>
+          <p><strong>Email:</strong> bulk@preccomp.com</p>
+          <p><strong>Lead Time:</strong> 4-6 business days</p>
+          <p><strong>Rating:</strong> ★★★★☆ (4.6/5)</p>
+        </div>
+        <div class="supplier-actions">
+          <button class="btn-action btn-info">VIEW ORDERS</button>
+          <button class="btn-action btn-success">SEND ORDER</button>
+          <button class="btn-small">EDIT</button>
+        </div>
+      </div>
+
+      <div class="supplier-card add-card">
+        <div class="add-card-content">
+          <p class="add-icon">+</p>
+          <p class="add-text">ADD NEW SUPPLIER</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

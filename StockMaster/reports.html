@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StockMaster | Reports</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="barcode-logo">
+          <div class="barcode"></div>
+          <span>StockMaster</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" data-nav="dashboard">Dashboard</a>
+        <a href="stock.html" data-nav="stock">Stock</a>
+        <a href="suppliers.html" data-nav="suppliers">Suppliers</a>
+        <a href="orders.html" data-nav="orders">Orders</a>
+        <a href="reports.html" data-nav="reports" class="active">Reports</a>
+        <button class="btn-logout" id="logoutBtn">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section class="page-header">
+      <div>
+        <h1>Reports & Analytics</h1>
+        <p>Generate and view inventory reports</p>
+      </div>
+      <button class="btn-action btn-primary">📊 EXPORT REPORT</button>
+    </section>
+
+    <!-- Report Selection -->
+    <section class="report-section">
+      <h2>Available Reports</h2>
+      <div class="report-buttons">
+        <button class="btn-action btn-primary">INVENTORY VALUATION</button>
+        <button class="btn-action btn-success">STOCK LEVEL ANALYSIS</button>
+        <button class="btn-action btn-warning">LOW STOCK ALERTS</button>
+        <button class="btn-action btn-info">SUPPLIER PERFORMANCE</button>
+        <button class="btn-action btn-primary">ORDER HISTORY</button>
+        <button class="btn-action btn-success">MOVEMENT ANALYSIS</button>
+      </div>
+    </section>
+
+    <!-- Report Preview -->
+    <section class="info-section">
+      <h2>Inventory Valuation Report - March 2026</h2>
+      
+      <div class="report-content">
+        <div class="report-stats">
+          <div class="stat-box">
+            <p class="stat-label">Total Items in Stock</p>
+            <p class="stat-number">2,458</p>
+          </div>
+          <div class="stat-box">
+            <p class="stat-label">Total Inventory Value</p>
+            <p class="stat-number">$487,250</p>
+          </div>
+          <div class="stat-box">
+            <p class="stat-label">Average Stock Level</p>
+            <p class="stat-number">485 units</p>
+          </div>
+          <div class="stat-box">
+            <p class="stat-label">Stock Turnover Rate</p>
+            <p class="stat-number">4.2x/year</p>
+          </div>
+        </div>
+
+        <h3>Stock by Category</h3>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Items Count</th>
+              <th>Total Units</th>
+              <th>Inventory Value</th>
+              <th>% of Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Electronics</td>
+              <td>245</td>
+              <td>1,245</td>
+              <td>$295,680</td>
+              <td>60.7%</td>
+            </tr>
+            <tr>
+              <td>Hardware</td>
+              <td>178</td>
+              <td>687</td>
+              <td>$137,400</td>
+              <td>28.2%</td>
+            </tr>
+            <tr>
+              <td>Accessories</td>
+              <td>89</td>
+              <td>526</td>
+              <td>$54,170</td>
+              <td>11.1%</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Low Stock Items</h3>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>SKU</th>
+              <th>Product</th>
+              <th>Current Stock</th>
+              <th>Minimum Level</th>
+              <th>Days Until Alert</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SKU-2024-045</td>
+              <td>Safety Helmet</td>
+              <td class="qty-low">15</td>
+              <td>50</td>
+              <td>3 days</td>
+              <td><button class="btn-small">REORDER</button></td>
+            </tr>
+            <tr>
+              <td>SKU-2024-203</td>
+              <td>Switch Housing</td>
+              <td class="qty-low">28</td>
+              <td>60</td>
+              <td>5 days</td>
+              <td><button class="btn-small">REORDER</button></td>
+            </tr>
+            <tr>
+              <td>SKU-2024-512</td>
+              <td>Capacitor Unit</td>
+              <td class="qty-low">8</td>
+              <td>35</td>
+              <td>1 day</td>
+              <td><button class="btn-small">URGENT</button></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Top Suppliers by Order Volume</h3>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Supplier</th>
+              <th>Orders</th>
+              <th>Total Value</th>
+              <th>Avg Lead Time</th>
+              <th>Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Premium Hardware Supply</td>
+              <td>28</td>
+              <td>$125,450</td>
+              <td>2.8 days</td>
+              <td>★★★★★</td>
+            </tr>
+            <tr>
+              <td>Industrial Parts Co.</td>
+              <td>24</td>
+              <td>$112,300</td>
+              <td>4.2 days</td>
+              <td>★★★★☆</td>
+            </tr>
+            <tr>
+              <td>Precision Components Inc</td>
+              <td>19</td>
+              <td>$98,750</td>
+              <td>5.1 days</td>
+              <td>★★★★☆</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
