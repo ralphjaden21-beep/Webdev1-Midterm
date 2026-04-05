@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Cabrito's Cakehouse</title>
+    <title>Shop - Cabrito's Cakehouse</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
         <div class="logo">
-		<img src="images/logo.png" alt="Cabrito's Cake House" class="logo-img">
+		<img src="images/logo.png" alt="Cabrito's Cakehouse Logo" class="logo-img">
 		Cabrito's Cakehouse
 		</div>
         <div class="nav-links">
@@ -35,21 +35,29 @@
     </div>
 
     <div class="container">
-        <section id="home" class="page active">
-            <div class="carousel">
-                <img id="carousel-img" class="carousel-img" src="images/banner.jpeg" alt="Banner Image">
-                <div class="carousel-overlay">
-				<h1>Cabrito's Cakehouse</h1>
-				<p>Taste the delicious handmade cakes</p>
-				<a href="shop.html" class="btn-cream">Browse the Shop</a>
-			</div>
+
+        <section id="shop" class="page active">
+            <h2 style="margin-bottom: 30px;">Menu</h2>
+            
+            <!-- Search Bar -->
+            <div style="margin-bottom: 2rem;">
+                <input type="text" class="search-bar" placeholder="Search cakes by name or category...">
             </div>
-            <h2>Best Seller</h2>
-            <div class="grid" id="trending-grid"></div>
+
+            <!-- Category Filter -->
+            <div style="margin-bottom: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                <button class="filter-btn active" onclick="filterByCategory('')">All</button>
+                <button class="filter-btn" onclick="filterByCategory('Classic')">Classic</button>
+                <button class="filter-btn" onclick="filterByCategory('Specialty')">Specialty</button>
+                <button class="filter-btn" onclick="filterByCategory('Popular')">Popular</button>
+                <button class="filter-btn" onclick="filterByCategory('Custom')">Custom</button>
+            </div>
+
+            <!-- Cake Grid -->
+            <div class="grid" id="full-grid"></div>
         </section>
 
-
-       
+    
     </div>
     <script src="main.js"></script>
 </body>
