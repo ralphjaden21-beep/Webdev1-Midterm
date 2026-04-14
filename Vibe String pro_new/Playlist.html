@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Favorites</title>
+<style>
+  :root {
+    --bg: #080808;
+    --text: #f4f4f4;
+    --muted: #b0b0b0;
+    --border: rgba(255, 255, 255, 0.08);
+    --panel: rgba(255, 255, 255, 0.05);
+    --accent: #ff0033;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text);
+    background:
+      radial-gradient(circle at top, rgba(255, 0, 51, 0.18), transparent 28%),
+      linear-gradient(180deg, #171717 0%, #0b0b0b 52%, #060606 100%);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .page {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 28px 22px 42px;
+  }
+
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 24px;
+  }
+
+  .topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border-radius: 999px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+  }
+
+  .session-pill,
+  .logout-btn {
+    padding: 12px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--panel);
+    color: var(--text);
+  }
+
+  .logout-btn {
+    cursor: pointer;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 28px;
+    align-items: end;
+    padding: 28px;
+    border-radius: 30px;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03)),
+      linear-gradient(135deg, rgba(255, 0, 51, 0.18), rgba(255, 149, 0, 0.08));
+    border: 1px solid var(--border);
+    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.35);
+    margin-bottom: 24px;
+  }
+
+  .hero img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 22px 44px rgba(0, 0, 0, 0.36);
+  }
+
+  .eyebrow {
+    margin: 0 0 8px;
+    color: #ffd4dc;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.82rem;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2.2rem, 5vw, 4.4rem);
+    line-height: 0.95;
+  }
+
+  .hero p {
+    color: #dddddd;
+    line-height: 1.7;
+    max-width: 580px;
+  }
+
+  .stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 18px;
+  }
+
+  .stat {
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--border);
+  }
+
+  .template-note {
+    margin: 18px 0 20px;
+    padding: 14px 16px;
+    border-radius: 18px;
+    border: 1px dashed rgba(255, 255, 255, 0.22);
+    background: rgba(255, 255, 255, 0.03);
+    color: #d6d6d6;
+    line-height: 1.6;
+  }
+
+  .track-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .track-card {
+    display: grid;
+    grid-template-columns: 124px 1fr;
+    gap: 18px;
+    padding: 16px;
+    border-radius: 24px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+  }
+
+  .track-card img {
+    width: 124px;
+    height: 124px;
+    object-fit: cover;
+    border-radius: 18px;
+  }
+
+  .track-meta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .track-meta h2 {
+    margin: 0 0 6px;
+    font-size: 1.3rem;
+  }
+
+  .track-meta p {
+    margin: 0;
+    color: var(--muted);
+  }
+
+  audio {
+    width: 100%;
+    margin-top: 16px;
+    filter: invert(1) saturate(0.35) contrast(1.08);
+  }
+
+  @media (max-width: 900px) {
+    .hero,
+    .track-grid,
+    .track-card {
+      grid-template-columns: 1fr;
+    }
+
+    .hero {
+      align-items: start;
+    }
+
+    .hero img,
+    .track-card img {
+      width: 100%;
+      height: auto;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="topbar">
+      <a class="back-link" href="YoutubeMusic.html">&lt;- Back to Home</a>
+      <div class="topbar-actions">
+        <div class="session-pill" id="sessionPill">Playlist view</div>
+        <button class="logout-btn" id="logoutBtn" type="button">Log Out</button>
+      </div>
+    </div>
+
+    <section class="hero">
+  
+      <img src="High.jfif" alt="Favorites playlist cover">
+      <div>
+        <p class="eyebrow">Playlist</p>
+        <h1>My Favorites</h1>
+  
+        <div class="stats">
+          <div class="stat">6 songs</div>
+          <div class="stat">Pop / Alt / Rock</div>
+          <div class="stat">For repeat listens</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="template-note">
+   
+    </div>
+
+    <section class="track-grid">
+      <article class="track-card">
+      
+        <img src="High.jfif" alt="Song 1 cover">
+        <div class="track-meta">
+          <h2>HighHopes</h2>
+          <p>Panic at the disco</p>
+          <audio controls>
+            
+            <source src="Hope.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </article>
+
+      <article class="track-card">
+        
+        <img src="Linkin.jpeg" alt="Song 2 cover">
+        <div class="track-meta">
+          <h2>Numb</h2>
+          <p>Linkin Park</p>
+          <audio controls>
+            
+            <source src="park.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </article>
+
+      <article class="track-card">
+       
+        <img src="Lady.jpeg" alt="Song 3 cover">
+        <div class="track-meta">
+          <h2>Bad Romance</h2>
+          <p>Lady Gaga</p>
+          <audio controls>
+        
+            <source src="Ladygaga.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </article>
+
+      <article class="track-card">
+     
+        <img src="Gotye.jpeg" alt="Song 4 cover">
+        <div class="track-meta">
+          <h2>Somebody I used to know</h2>
+          <p>Gotye</p>
+          <audio controls>
+          
+            <source src="Sombody.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </article>
+      <article class="track-card">
+        
+        <img src="ye.jpeg" alt="Song 4 cover">
+        <div class="track-meta">
+          <h2>God is</h2>
+          <p>Kanye West</p>
+          <audio controls>
+            
+            <source src="God is.mp3.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </article>
+      <article class="track-card">
+  
+        <img src="katy.jpeg" alt="Song 4 cover">
+        <div class="track-meta">
+          <h2>E.T Without Kanye west Remix</h2>
+          <p>Katy Perry</p>
+          <audio controls>
+        
+            <source src="E.T.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </article>
+      
+
+     
+    </section>
+  </div>
+
+  <script>
+    if (localStorage.getItem("ytMusicLoggedIn") !== "true") {
+      window.location.href = "index.html";
+    }
+
+    const userEmail = localStorage.getItem("ytMusicUserEmail") || "Listener";
+    const sessionPill = document.getElementById("sessionPill");
+    const logoutBtn = document.getElementById("logoutBtn");
+
+    sessionPill.textContent = "Playlist view for " + userEmail;
+
+    logoutBtn.addEventListener("click", function () {
+      localStorage.removeItem("ytMusicLoggedIn");
+      localStorage.removeItem("ytMusicUserEmail");
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>
