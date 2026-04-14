@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | CabsElectronics 💻</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: #A72703;
+    color: #FCB53B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-box {
+    background: #7a1d02;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    width: 300px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #FCB53B;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.error {
+    color: #ffcccc;
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+    <h2>CabsElectronics 💻</h2>
+
+    <input type="text" id="user" placeholder="Username">
+    <input type="password" id="pass" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+
+    <p class="error" id="error"></p>
+</div>
+
+<script>
+function login() {
+    let user = document.getElementById("user").value;
+    let pass = document.getElementById("pass").value;
+
+    if (user !== "" && pass !== "") {
+        localStorage.setItem("loggedIn", "yes");
+
+      
+        window.location.href = "Home.html";
+    } else {
+        document.getElementById("error").innerText = "Please enter username and password";
+    }
+}
+</script>
+
+</body>
+</html>

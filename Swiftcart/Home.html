@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CabsElectronics 💻</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #A72703;
+    color: #FCB53B;
+}
+
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #7a1d02;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.top-nav a {
+    color: #FCB53B;
+    text-decoration: none;
+}
+
+
+.brand-banner {
+    padding: 40px;
+    text-align: center;
+}
+
+.brand-banner h1 {
+    font-size: 40px;
+}
+
+
+.main {
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    padding: 20px;
+    background: #7a1d02;
+}
+
+/* Product Section */
+.productspage {
+    flex: 1;
+    padding: 20px;
+}
+
+
+.carousel {
+    position: relative;
+    max-width: 700px;
+    margin: 20px auto;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.slide.active {
+    display: block;
+}
+
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+
+.card {
+    background: #8f2403;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card button {
+    background: #FCB53B;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-nav">
+    <div class="logo">CabsElectronicsCart 💻</div>
+    <a href="login.html">Log Out</a>
+</div>
+
+<div class="brand-banner">
+    <h1>CabsElectronicsCart 💻</h1>
+    <p>Friendly Prices • Fast Delivery</p>
+</div>
+
+<div class="main">
+
+    <div class="sidebar">
+        <h2>Categories</h2>
+        <ul>
+            <li>Gadgets</li>
+            <li>Computers</li>
+            <li>Laptops</li>
+            <li>Tablets</li>
+        </ul>
+    </div>
+
+    <div class="productspage">
+
+        <h2>Featured Products</h2>
+
+      
+        <div class="carousel">
+
+            <button class="prev" onclick="moveSlide(-1)">❮</button>
+
+            <img src="phone.jpeg" class="slide active">
+            <img src="Computer.jpg" class="slide">
+            <img src="laptop.jpeg" class="slide">
+
+            <button class="next" onclick="moveSlide(1)">❯</button>
+
+        </div>
+     
+
+        <h2>Products</h2>
+
+        <div class="products">
+
+            <div class="card">
+                <img src="phone.jpeg">
+                <h4>Cellphones</h4>
+                <p>₱ 7,999.00</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <img src="Computer.jpg">
+                <h4>Computers</h4>
+                <p>₱ 75,100.00</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <img src="laptop.jpeg">
+                <h4>Laptops</h4>
+                <p>₱ 59,999.00</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <img src="tablet.jpeg">
+                <h4>Tablets</h4>
+                <p>₱ 12,985.00</p>
+                <button>Add to Cart</button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+let index = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(i) {
+    slides.forEach(s => s.classList.remove("active"));
+    slides[i].classList.add("active");
+}
+
+function moveSlide(step) {
+    index += step;
+
+    if (index >= slides.length) index = 0;
+    if (index < 0) index = slides.length - 1;
+
+    showSlide(index);
+}
+
+
+setInterval(() => {
+    moveSlide(1);
+}, 3000);
+</script>
+
+</body>
+</html>
